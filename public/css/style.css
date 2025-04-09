@@ -1,0 +1,670 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body{
+  overflow-x: hidden;
+  --bg :#022222;
+  --bgpattern:url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+h2{
+	font-size: 4.2rem;
+	opacity: 0.4;
+	font-family: "Condiment", cursive;
+
+}
+
+h3 {
+	font-family: "Grechen Fuemen", cursive;
+	letter-spacing: 6px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0px;
+  }
+
+  hr{
+     width: 30%;
+	 margin:10px auto 32px;
+
+  }
+
+  h4{
+  font-size: 22px;
+  }
+
+  h5{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;	
+font-weight:700;
+  }
+  
+  h6{
+	font-size: 13.5px;
+	font-weight: 400;
+  }
+  p{
+	font-size: 14px;
+  }
+
+  
+/* Navbar CSS */
+
+nav{
+	background-color: rgba(88, 86, 86, 0.482);
+	box-shadow: 5px 5px 20px rgb(26, 26, 26);
+}
+
+.navbar-brand{
+    margin-left: 40px;
+	color: #fff;
+}
+
+.nav-link{
+	color: #fff;
+}
+
+.navbar-collapse{
+flex-grow: 0;
+margin-right: 50px;
+}
+
+.navbar li{
+ padding: 5px;
+}
+
+.navbar-nav  li a:hover {
+    color: #0870d8 !important;
+}
+
+/* Home CSS */
+
+.homecontainer{
+    width:100vw;
+    height:100vh;
+	background-color: rgb(46, 44, 44);
+}
+
+.homecontainer .clip{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition:0.5s;
+}
+
+.homecontainer .clip.clip1{
+    background:url(../images/pic3.jpg);
+    background-size:cover;
+	background-attachment: fixed;
+    clip-path: polygon(0 0, 50% 0, 0 100%, 0% 100%);
+}
+.homecontainer .clip.clip2{
+    background:url(../images/eiffeltower.jpg);
+    background-size:cover;
+	background-attachment: fixed;
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+}
+.homecontainer .clip.clip3{
+    background:url("https://tickets-burjkhalifa.com/wp-content/uploads/2024/08/Burj-Khalifa-at-night.webp");
+    background-size:cover;
+	background-attachment: fixed;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+}
+.homecontainer:hover .clip{
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.homecontainer .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.homecontainer .clip .content{
+    position:absolute;
+    bottom:-100%;
+    left:0%;
+    width:20%;
+    padding:20px;
+    transition:0.5s;
+    opacity:0;
+	color: beige;
+
+}
+.homecontainer .clip:hover .content{
+    bottom:30%;
+	left:5%;
+    opacity:1;
+}
+
+/* Whyus CSS */
+
+#whyus{
+	position: relative;
+	padding: 40px 55px 26px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+/* Stats CSS */
+
+ .statscontainer{
+	border-top: 3px solid rgb(3, 76, 43);
+	border-top-left-radius: 300px;
+	border-bottom-right-radius: 300px;
+	position: relative;
+	padding: 20px 5px;
+	z-index: 1;
+  margin-bottom:-55px;
+  width: 70%;
+  background-color: #fff;
+ }
+
+ .col{
+   border-right: 3px solid rgb(4, 54, 35);
+ }
+
+ .lastcol{
+	border-right: none;
+ }
+
+/* Quote CSS */
+
+.testimonial {
+	padding: 70px;
+	background-color: var(--bg);
+	background-image: var(--bgpattern);
+}
+
+  blockquote {
+	border-left: 5px solid white;
+	margin:20px auto 0 ;
+	width: 95%;
+	font-family: Georgia, Time, serif;
+	word-spacing: 1px;
+	padding-left: 18px;
+	font-style: italic;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+  }
+
+  blockquote cite {
+	display: block;
+	text-align: right;
+	text-transform: uppercase;
+	font-family: Helvetica, Arial, sans-serf;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: bold;
+	color: #888;
+	margin-top: 5px;
+  }
+
+  
+
+  /* Posts CSS */
+
+  .recent-posts{
+	padding:35px;
+	max-width: 98vw;
+	margin: auto auto 10px ;
+  }
+
+.post{
+	position: relative;
+	min-width: 15rem;
+	max-width:22rem;
+	margin: 15px  0;
+	border-radius: 5px;
+	color :gray;
+	box-sizing: border-box;
+	overflow :hidden;
+}
+
+.post:hover .post-title{
+	color :rgb(0, 0, 0);
+}
+
+.post:hover .more{
+opacity: 1;
+}
+
+.has-image{
+	background-color:white;
+	box-shadow:0 3px 10px rgba(0,0,0,.14);
+}
+
+.has-image:hover .post-image>img{
+	transform:translate(-50%,-50%) scale(1.05);
+}
+
+.post-image{
+    padding-top: 55%;
+	overflow :hidden;
+    position: relative;
+}
+				
+.post-image img{
+	width :100%;	
+	position: absolute;
+	top :50%;
+	left :50%;
+	transform: translate(-50%,-50%) scale(1);
+	transition: all 1s ease;
+}
+
+.post-contentdiv{
+	padding: 30px;
+}
+
+.tag{
+   color: #6D7078;
+   	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.post-title{
+	margin-top: 8px;
+	margin-bottom: 0;
+	transition: all .5s ease;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+.post-content{
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.more{
+	margin-top: 25px;
+	display: inline-block;
+	font-weight :bold;
+	text-transform :uppercase;
+	opacity: .5;
+	font-size: 18px;
+	transition: all .5s ease;                                                                                                                                                                                                                                                                                                        
+	font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+  transition: all .5s ease;
+}
+
+.pub-date{
+	font-size: 14px;
+	position: absolute;
+	right: 15px;
+}
+
+.comment-icon{
+	position: absolute;
+	bottom:30px;
+	right:40px;
+}
+
+/* Compose CSS */
+
+.compose{
+	color: white;
+	padding: 30px 30px 16px ;
+    background-image: url("https://res.cloudinary.com/icelandtours/g_auto,f_auto,c_auto,w_3840,q_auto:good/northern_lights_above_glacier_lagoon_v2osk_unsplash_7d39ca647f.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.composeform{
+	background-color: rgba(78, 76, 76, 0.312);
+	box-shadow: 5px 5px 20px rgba(23, 23, 23, 0.894);
+	width: 50%;
+	margin: 50px  auto;
+	padding: 40px;
+	border-radius: 10px;
+
+}
+
+.btn-grad {
+	background-image: linear-gradient(to right, #217161 0%, #072d2e  51%, #217161  100%);
+}
+
+.btn-grad {
+   margin: 29px 0 5px;
+   padding: 8px 40px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #2c2b2bbd;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   text-decoration: none;
+   color: #fff;
+ }
+
+
+/* Contactus CSS */
+
+.contactheading {
+	flex-basis: 100%;
+	margin-bottom: 30px;
+}
+
+
+.contactus{
+	margin: auto;
+	padding: 35px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
+
+.left-container{
+	width: 33vw;
+	background-image: url("https://static.vecteezy.com/system/resources/thumbnails/051/491/262/small_2x/bioluminescence-animal-sea-plankton-on-beach-water-line-best-travel-nature-view-photo.JPG");
+color: white;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+text-align: center;
+
+}
+
+.explore {
+	margin: 150px auto 0;
+	width: 70%;
+	position: relative;
+}
+
+.explore > div > h4{
+	margin-bottom: 20px;
+}
+
+.arrow{
+	font-size: 30px;
+	margin-top: 47px;
+	position: absolute;
+	right: 10px;
+}
+
+.right-container{
+	width: 33vw;
+	padding: 30px;
+	box-shadow: 5px 5px 20px rgba(89, 88, 88, 0.405);
+}
+
+.pingus{
+	margin-bottom: 25px;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.contactform {
+    border: 0;
+    font-size: 13px;
+    border-radius: 0;
+    transition: .3s ease-in-out;
+    border: 2px solid transparent;
+    border-bottom-color: rgba(0,0,0,.1);
+}
+
+.contactform:hover, .contactform:focus{
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    border: 2px solid transparent;
+    border-bottom-color: var(--bg);
+
+}
+
+
+/* Singlepost CSS */
+
+.singlepost{
+	background-image: url("../images/pic5.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 10% 2% 8%;
+}
+
+.singlepost > div{
+	position: relative;
+	border-radius: 15px;
+	width: 60%;
+	padding-bottom: 35px;
+	margin: auto;
+    background-color: #171721aa;
+	color: rgb(255, 255, 255);
+}
+
+.accordion{
+	position: relative;
+	width: 92%;
+	margin: auto;
+}
+
+.profileicon{
+width: 55px;
+height: 55px;
+border-radius: 50px;
+float: left;
+margin: 10px 15px 10px 2px;
+}
+
+.user-name{
+	font-size: 16px;
+}
+.contentdiv{
+	position: relative;
+padding: 14px 0 5px;
+}
+
+.commentdate{
+position: absolute;
+right: 20px;
+bottom:35px;
+}
+
+.contentdiv+hr{
+width:88%;
+margin: auto 75px 5px;
+}
+
+/* Footer CSS */
+
+footer {
+	color: #fff;
+	padding: 35px;
+	text-align: center;
+	height: 90px;
+	background-color: var(--bg);
+	background-image: var(--bgpattern);
+}
+
+
+@media (max-width:992px){
+	.statscontainer{
+		border-top-left-radius: 100px;
+		border-bottom-right-radius: 100px;
+		padding: 20px 5px;
+	  margin-bottom:-100px;
+	  width: 70%;
+	 }
+
+	 .testimonial{
+		padding: 110px 50px 90px;
+	 }
+}
+
+@media(max-width:990px){
+	#whyus{
+		width: 98%;
+		padding:30px 6px 30px 16px;
+	}
+
+	.container{
+		max-width:800px;
+	}
+  
+	.statscontainer{
+		width: 90%;
+	}
+    
+	.composeform{
+		width: 60%;
+	}
+  
+	.left-container , .right-container{
+		width: 40vw;
+	}
+
+	.singlepost > div{
+		width:80%;
+	}
+
+	.contentdiv+hr{
+		width: 82%;
+	}
+
+
+}
+
+@media (max-width:800px) {
+	
+	h3{
+		font-size: 22px;
+		letter-spacing:5px;
+		}
+	
+	h4{
+		font-size: 19px;
+	}
+
+	h5{
+		font-size: 17px;
+	}
+
+	h6{
+		font-size: 12px;
+	}
+	
+}
+
+@media (max-width:700px){
+
+	.contactus{
+		flex-direction: column;
+	}
+
+	.left-container,.right-container{
+		width: 68vw;
+		margin: auto;
+	}
+
+   .explore{
+	margin:100px auto ;
+   }
+
+   .arrow{
+	visibility: hidden;
+   }
+ 
+   .composeform{
+	width: 70%;
+   }
+
+
+
+}
+
+@media (max-width:600px){
+
+	.singlepost > div{
+		margin-top: 40px;
+	}
+
+	.singlepost > div{
+		width:90%;
+	}
+
+	.contentdiv+hr{
+		width: 80%;
+	}
+
+	.left-container,.right-container{
+		width: 75vw;
+	}
+ 
+	.composeform{
+		width: 80%;
+	   }
+
+	   .col{
+		border-right: none;
+	  }
+  
+	
+
+}
+
+@media (max-width:450px){
+
+	h2{
+		font-size: 30px;
+	}
+
+	body{
+		overflow-x: hidden;
+	}
+
+	.singlepost > div{
+		width:97%;
+	}
+
+	.contentdiv+hr{
+		width: 70%;
+	}
+	.recent-posts{
+		padding: 20px;
+	}
+
+	.commentdate{
+		visibility: hidden;
+}  
+     .profileicon{
+		margin: 10px 8px 10px 0;
+	 }
+
+	.left-container,.right-container{
+		width: 85vw;
+	}
+
+	.explore{
+		width: 80%;
+	}
+
+	.composeform{
+		width: 96%;
+		padding: 30px 25px 16px;
+	   }
+     
+	   .contactus{
+	padding:30px 15px 30px 15px;
+}
+	   .statscontainer , .right-container{
+		padding: 22px;
+	   }
+	
+}
+

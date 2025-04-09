@@ -1,0 +1,30 @@
+
+<div class="recent-posts" id="posts">
+	<h3 class="title text-center">Latest Posts</h3>
+	<hr>
+	<div class="post-container" data-masonry='{ "itemSelector": ".post" , "columnWidth": 90}'>
+	
+		<% posts.forEach((post)=>{ %>
+
+			<a href="/posts/<%=post.postTitle%>" class="post has-image">
+				<div class="post-image">
+					<img src="/images/pic4.jpg" alt="">
+				</div>
+				<div class="post-contentdiv">
+					<div class="tags">
+						<span class="tag">Tag</span>
+						<span class="pub-date"><%=post.postDate %></span>
+					</div>
+					<h5 class="post-title"><%= post.postTitle %></h5>
+					<p class="post-content"><%= post.postContent.slice(0,99) %>...</p>
+					<span class="more">Read More</span>
+					<span class="comment-icon"><i class="fa-solid fa-comment"></i></span>
+				</div>
+			</a>
+
+	   <%	}) %>		
+	</div>
+</div>
+
+<!-- Main line to make uneven col grid or flex in html -->
+<!-- data-masonry='{ "itemSelector": ".post"}' -->

@@ -1,0 +1,60 @@
+
+<%-include("partials/header")-%>
+  <div class="singlepost">
+    <div>
+<div class="post-contentdiv">
+    <div class="tags">
+        <span class="tag">Tag</span>
+        <span class="pub-date"><%=post.postDate %></span>
+    </div>
+    <h5 class="post-title"><%= post.postTitle %></h5>
+    <p class="post-content"><%= post.postContent %></p>
+</div>
+<div class="accordion" id="accordionExample">
+
+    <div class="accordion-item">
+      <h6 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Comments
+        </button>
+      </h6>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+        <div class="commentbody">
+           
+            <% post.comments.forEach((comment)=>{ %>
+                <div class="item">
+                    <div class="titlediv">
+                        <img class="profileicon" src="/images/profileicon.jpg" alt="">
+                    </div>
+                    <div class="contentdiv">
+                        <span class="commentdate"><p><%= comment.date %></p></span>
+                        <h5 class="user-name">Travel User</h5>
+                        <p class="commentpara"> <%= comment.comment %></p>
+                    </div>
+                    <hr>
+                </div> 
+          <%  }) %>
+           
+        </div>
+ 
+        <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Leave a comment</h5>
+              <form method="post" action="/comment">
+                <div class="form-group">
+                  <textarea rows="3" class="form-control bg-light" name="comment" placeholder="Enter your comment here..." style="resize: none;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-grad" name="post" value="<%= post.postTitle %>">Comment</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%-include("partials/footer")-%>
